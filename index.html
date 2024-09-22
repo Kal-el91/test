@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des QR Codes</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CDN pour jsQR (librairie pour scanner des QR codes) -->
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
+</head>
+<body>
+    <h1>Gestion des accès par QR Code</h1>
+
+    <!-- Section pour associer un QR code à un nom/prénom -->
+    <section>
+        <h2>Associer un QR code à un utilisateur</h2>
+        <input type="text" id="nom" placeholder="Nom">
+        <input type="text" id="prenom" placeholder="Prénom">
+        <button id="startAssign">Associer QR</button>
+        <p id="assignStatus"></p>
+    </section>
+
+    <!-- Section pour scanner un QR code -->
+    <section>
+        <h2>Scanner un QR code</h2>
+        <div class="video-container">
+            <video id="video" width="400" height="300" autoplay></video>
+        </div>
+        <canvas id="canvas" hidden></canvas>
+        <button id="startScan">Démarrer le scan</button>
+        <button id="switchCamera">Changer de caméra</button>
+        <p id="qr-result"></p>
+        <p id="access-message"></p>
+    </section>
+
+    <!-- Bouton pour réinitialiser les données -->
+    <button id="resetData">Réinitialiser les données</button>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
